@@ -97,7 +97,7 @@ var comparar = function(elemento1, elemento2) {
 
 // Reset the game when the player catches a princess
 var reset = function () {
-	
+
 	localStorage.setItem("princessesCaught", princessesCaught);
 	localStorage.setItem("muertes", muertes);
 
@@ -314,7 +314,8 @@ var render = function () {
 		if (bgReady) {
 			ctx.drawImage(bgImage, 0, 0);
 		}
-
+		localStorage.setItem("princessesCaught", 0);
+		localStorage.setItem("muertes", 0);
 		ctx.fillText("GAME OVER ",180,200);
 	}else{
 
